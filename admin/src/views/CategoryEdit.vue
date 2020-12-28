@@ -16,22 +16,22 @@
 </template>
 <script>
 export default {
-  data(){
-    return{
-      model:{
-        name:''
-      }
-    }
+  data() {
+    return {
+      model: {
+        name: "",
+      },
+    };
   },
   methods: {
-    async save(){
-      const res = await this.$http.post('categories',this.model)
-      console.log(res)
-      this.$router.push('/categories/list')
-      this.$message.success('保存成功')
-    }
+    async save() {
+      const res = await this.$http.post("categories", this.model);
+      console.log(res);
+      this.$router.push("/categories/list");
+      this.$message.success("保存成功");
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
